@@ -75,7 +75,7 @@ public class ArrayList<T> implements List<T> {
     public T remove(int index) {
         checkIndex(index);
 
-        Object savedValue = elements[index];
+        final Object savedValue = elements[index];
 
         for (int i = index; i < size - 1; i++) {
             elements[i] = elements[i + 1];
@@ -92,7 +92,7 @@ public class ArrayList<T> implements List<T> {
         if (element != null) {
             for (int i = 0; i < size; i++) {
                 if (element.equals(elements[i])) {
-                    Object savedValue = elements[i];
+                    final Object savedValue = elements[i];
 
                     for (int j = i; j < size - 1; j++) {
                         elements[j] = elements[j + 1];
