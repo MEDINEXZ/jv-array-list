@@ -92,7 +92,7 @@ public class ArrayList<T> implements List<T> {
     public T remove(T element) {
         for (int i = 0; i < size; i++) {
             if (Objects.equals(element, elements[i])) {
-                final Object savedValue = elements[i];
+                Object savedValue = elements[i];
 
                 for (int j = i; j < size - 1; j++) {
                     elements[j] = elements[j + 1];
