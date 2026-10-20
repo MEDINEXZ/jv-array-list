@@ -70,7 +70,7 @@ public class ArrayList<T> implements List<T> {
     @Override
     public T remove(T element) {
         for (int i = 0; i < size; i++) {
-            if (elements == null ? elements[i] == null : element.equals(elements[i])) {
+            if (element == null ? elements[i] == null : element.equals(elements[i])) {
                 final Object savedValue = elements[i];
 
                 System.arraycopy(elements, i + 1, elements, i, size - i - 1);
